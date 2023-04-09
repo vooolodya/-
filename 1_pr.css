@@ -1,0 +1,44 @@
+body{
+    background-color: #1F2833;
+    color: #66FCF1;
+}
+
+h1{
+    text-align: center;
+    margin-top: 3%;
+}
+
+h2{
+    margin-left: 10%;
+}
+
+p{
+    margin-left: 10%;
+}
+
+.board{
+    margin-left: 15%;
+    width: 640px;
+    height: 640px;
+    border: 10px solid #673317;
+    
+}
+.square{
+    float: left;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.black{
+    background-color: rgb(71, 65, 65);
+}
+.white{
+    background-color: #C5C6C7;
+}
+.figure{
+    font-size: 60px;
+    cursor: pointer;
+
+}
