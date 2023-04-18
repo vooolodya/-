@@ -1,19 +1,23 @@
+var map;
 var divSquare = '<div id = "s$coord" class = "square $color"></div>';
 var divFigure = '<div id = "f$coord" class = "figure">$figure</div>';
 
 $(function(){
+    start();
+})
+
+function start(){
+    map = new Array(64);
     createBoard();
     showFigures('1w1w1w1ww1w1w1w1111111111111111111111111111111111b1b1b1bb1b1b1b1');
-    setDraggable();
-    setDroppable();
-})
+}
 
 function setDraggable(){
     $('.figure').draggable();
 }
 
 function setDroppable(){
-    $('.figure').droppable({
+    $('.square').droppable({
         drop: function(envent, ui){
             var frCoord = ui.draggable.attr('id').substring(1);
             var toCoord = this.id.substring(1);
@@ -23,17 +27,18 @@ function setDroppable(){
 }
 
 function moveFigure(frCoord, toCoord){
-
+    figure = map[frCoord];
+    showFigureAt(frCoord, '1');
+    showFigureAt(toCoord, figure);
 }
 
 function createBoard() {
     $('.board').html('');
     for (var coord = 0; coord < 64; coord++)
     {
-        $('.board').append(divSquare.replace('$coord', coord).replace('$color', 
-        isBlackSquareAt(coord) ? 'black' : 'white'));
-
+        $('.board').append(divSquare.replace('$coord', coord).replace('$color', isBlackSquareAt(coord) ? 'black' : 'white'));
     }
+    setDroppable();
 }
 
 function isBlackSquareAt(coord){
@@ -46,7 +51,9 @@ function showFigures(figure){
 }
 
 function showFigureAt(coord, figure){
+    map[coord] = figure;
     $('#s' + coord).html(divFigure.replace('$coord', coord).replace('$figure', getCheckersSymbol(figure)));
+    setDraggable();
 }
 
 function getCheckersSymbol(figure){

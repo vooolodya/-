@@ -11,6 +11,7 @@
     <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src = "checkers.js"></script>
+    <script src = "str_func.js"></script>
 </head>
 
 <body>
@@ -18,7 +19,31 @@
 
     <h2>Задание 1</h2>
     <p>Реализовать функцию, которая находит в строке заданную подстроку и возвращает номер строки(?) на нее. </p>
-    
+
+    <div>
+        <p>Поле для ввода родительской строки:</p>
+        <p>
+            <input type="text" class="input_parent_str" id="field1"/>
+
+        </p>
+    </div>
+
+    <div>
+        <p>Поле для ввода дочерней строки(подстроки):</p>
+        <p>
+            <input type="text" class="input_child_str" id="field2"/>
+
+        </p>
+    </div>
+
+    <input class="button" type="button" value="Ok" id="push">
+
+    <p>
+        Результат:
+        <div class="kak_p" id="isid"></div>
+    </p>
+
+
     <h2>Задание 2</h2>
     <p>Напишите мини-игру связав с событием на клик (шашки)</p>
     <div class = "board"></div>

@@ -16,13 +16,43 @@ p{
     margin-left: 10%;
 }
 
+.kak_p{
+    margin-left: 10%;
+    margin-bottom: 70px;
+}
+
+.res{
+    margin-left: 10%;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.input_parent_str{
+    margin-left: 15%;
+    background-color: #98b7d6;
+    width: 500px;
+    margin-bottom: 1%;
+}
+
+.input_child_str{
+    margin-left: 15%;
+    background-color: #98b7d6;
+}
+
+.button{
+    background-color: #98b7d6;
+    margin-left: 25%;
+}
+
 .board{
     margin-left: 15%;
     width: 640px;
     height: 640px;
-    border: 10px solid #673317;
+    border: 10px solid #66FCF1;;
     
 }
+
 .square{
     float: left;
     width: 80px;
@@ -31,12 +61,15 @@ p{
     align-items: center;
     justify-content: center;
 }
+
 .black{
-    background-color: rgb(71, 65, 65);
+    background-color: #1d6b67;
 }
+
 .white{
-    background-color: #C5C6C7;
+    background-color: #98b7d6;
 }
+
 .figure{
     font-size: 60px;
     cursor: pointer;
